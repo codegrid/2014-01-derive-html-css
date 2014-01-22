@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+label {
+    display: block;
+}
+
+input:invalid {
+    border-color: tomato;
+}
+/* 一つでも間違っている場合 */
+input:invalid ~ 
+.status:before {
+    color: tomato;
+    content:'まだ埋まっていない項目があります';
+}
+input:invalid ~ 
+input[type="submit"] {
+    display: none;
+}
+/* すべて正しい場合 */
+input:valid ~ 
+input:valid ~ 
+input:valid ~ 
+input:valid ~ 
+.status:before {
+    color: green;
+    content:'すべて埋まりました！';
+}
+input:valid ~ 
+input:valid ~ 
+input:valid ~ 
+input:valid ~ 
+input[type="submit"] {
+    display: inline;
+}

@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+/* radioは非表示に */
+#flag { display: none; }
+/* 見た目 */
+[for="flag"] {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+[class*="scene_"] {
+    width: 100%;
+    height: 0px;
+    background: #ccc;
+    overflow: hidden;
+}
+.scene_1 { background: orange; }
+.scene_2 { background: tomato; }
+/* チェックされたら色を変更する */
+#flag:checked ~ [for="flag"] {
+    color: #ccc;
+}
+/* チェックされたら.scene_2を表示 */
+/* チェックされていなければ.scene_1を表示 */
+#flag:checked ~ .scene_2,
+#flag:not(:checked) ~ .scene_1 {
+    height: 150px;
+}

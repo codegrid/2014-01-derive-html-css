@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+/* 正解ならinline-blockにして表示する */
+.quiz > input:valid {
+	display: inline-block;
+}
+/* 正解のinput要素の直後の弟要素の擬似要素でメッセージを表示 */
+.quiz > input:valid + span:before {
+	content: '✔';
+	color: green;
+}
+/* 正解のinput要素以降の兄弟要素の.quizを表示 */
+.quiz > input:valid ~ .quiz {
+    display: block;
+}
+/* 不正解のinput要素以降の兄弟要素の.quizを表示 */
+.quiz > input:invalid ~ .quiz {
+    display: none;
+}

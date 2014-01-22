@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NoJS Typing Game</title>
+<link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="style.css" media="all">
+</head>
+<body>
+<div class="m-overlay"></div>
+<div class="m-canvas">
+
+	<input id="flag_initialScene" class="hidden" type="radio">
+	<input class="q1 hidden" type="text" pattern="Apple" required autofocus>
+	<input class="q2 hidden" type="text" pattern="みかん"  required autofocus>
+	<input class="q3 hidden" type="text" pattern="The quick brown fox jumps over the lazy dog" required autofocus>
+
+	<div class="m-progress">
+		<div class="m-progress-bar"></div>
+	<!-- /.m-progress --></div>
+
+	<div class="m-title">
+		<div class="m-title-item1">
+			1st stage<br>
+			Enter <strong>Apple</strong>
+		</div>
+		<div class="m-title-item2">
+			2nd stage<br>
+			Enter <strong>みかん</strong></div>
+		<div class="m-title-item3">
+			Final stage<br>
+			Enter <strong>The quick brown fox jumps over the lazy dog</strong>
+		</div>
+	<!-- /.m-title --></div>
+
+	<div class="m-caution">↑ Please focus textarea ↑</div>
+
+	<div class="m-initialScene">
+		<h2 class="m-initialScene-heading">NoJS Typing Game</h2>
+		<div class="m-initialScene-text">
+			<strong>Time limit : 10 seconds</strong><br>
+			Enter words to textarea<br>
+		</div>
+		<label class="m-button" for="flag_initialScene">NEW GAME</label>
+	<!-- /.m-initialScene --></div>
+
+	<div class="m-finalScene">
+		<h2 class="m-finalScene-heading">GAME OVER</h2>
+		<div class="m-finalScene-text">
+			<span class="m-finalScene-result"></span>
+		</div>
+		<a class="m-button" href="index.html?">RETRY?</a>
+	<!-- /.m-finalScene --></div>
+
+<!-- /.m-canvas --></div>
+</body>
+</html>
