@@ -1,0 +1,19 @@
+@charset "UTF-8";
+:root {
+  var-block-color: 10;
+  var-block-fontsize: 14;
+  var-block-width: 200px;
+  var-block-height: 50px;
+  var-block-color: 10px;
+  var-gradient--from: #ccc;
+  var-gradient--to: #eee;
+}
+.block {
+  width: var(block-width); /* 200px */
+  height: var(block-height); /* 50px */
+  margin-bottom: calc(var(block-height)/2); /* 25px */
+  color: var(block-color); /* 無効な値により初期値 */
+  font-size: calc(var(block-fontsize) * 1px); /* 14px */
+  background: linear-gradient(to bottom, var(gradient--from), var(gradient--to) );
+  border: 2px solid var(block-border-color, green); /* Firefoxではgreenが適用されます*/
+}
