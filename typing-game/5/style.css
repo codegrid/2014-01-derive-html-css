@@ -32,14 +32,23 @@
 /* クリックされたら0秒後に非表示するように設定する */
 #flag:checked ~ .scene_1 {
     -webkit-animation-delay: 0;
+    animation-delay: 0;
 }
 /* クリックされてなければ、5秒後に非表示するように設定する */
 #flag:not(:checked) ~ .scene_1 {
     -webkit-animation: 0.1ms hide linear;
     -webkit-animation-delay: 5s;
     -webkit-animation-fill-mode: forwards;
+    animation: 0.1ms hide linear;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
 }
 @-webkit-keyframes hide {
+    100% {
+        height: 0px;
+    }
+}
+@keyframes hide {
     100% {
         height: 0px;
     }
@@ -47,14 +56,23 @@
 /* クリックされたら0秒後に表示するように設定する */
 #flag:checked ~ .scene_2 {
     -webkit-animation-delay: 0;
+    animation-delay: 0;
 }
 /* クリックされてなければ、5秒後に表示するように設定する */
 #flag:not(:checked) ~ .scene_2 {
     -webkit-animation: 0.1ms show linear;
     -webkit-animation-delay: 5s;
     -webkit-animation-fill-mode: forwards;
+    animation: 0.1ms show linear;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
 }
 @-webkit-keyframes show {
+    100% {
+        height: 150px;
+    }
+}
+@keyframes show {
     100% {
         height: 150px;
     }
