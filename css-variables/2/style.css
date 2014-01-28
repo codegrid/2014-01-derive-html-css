@@ -24,7 +24,7 @@
 	var-img-margin: 0 20px 0 0;
 	var-heading-color: darkred;
 	var-heading-fontsize: 35px;
-	var-heading-margin: 0 0 10px -20px;
+	var-heading-margin: 0 0 10px 0px;
 	var-heading-before-content: ' 「';
 	var-heading-after-content: '」';
 	var-text-color: firebrick;
@@ -51,7 +51,7 @@
 	var-img-width: 50px;
 	var-heading-color: forestgreen;
 	var-heading-fontsize: 35px;
-	var-heading-margin: 0 0 0 -20px;
+	var-heading-margin: 0 0 0 0;
 	var-heading-before-content: '『';
 	var-heading-after-content: '』';
 	var-text-color: limegreen;
