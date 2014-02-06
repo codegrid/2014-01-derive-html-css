@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+body {
+	margin:0;
+	padding:0;
+}
+
+h1 {
+	margin: 0 0 0;
+}
+h2 {
+	margin: 0 0 10px;
+}
+
+
+.stage {
+	width: 400px;
+	font-size: 14px;
+	font-family: sans-serif;
+	word-break: break-all;
+	line-height: 1.5;
+	color: #111;
+	overflow: hidden;
+	margin: 0 auto 0;
+}
+.stage i {
+	display: inline-block;
+}
+.stage i.br {
+	display: block;
+}
+
+.shape {
+	width: 500px;
+	color: tomato;
+	margin-bottom: 10px;
+	margin-left: -50px;
+}
+
+.left {
+	float: left;
+	width: 48%;
+	margin-right: 2%;
+}
+.right {
+	overflow: hidden;
+}

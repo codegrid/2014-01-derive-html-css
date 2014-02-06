@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+/* fontsize changer */
+[name="fs"] {
+	display: none;
+}
+label {
+	border: 1px solid #ccc;
+	padding: 5px;
+}
+[name="fs"]:checked + label {
+	background: #ccc;
+	color: #fff;
+}
+#fs-1:checked ~ .content { font-size: 12px; }
+#fs-2:checked ~ .content { font-size: 14px; }
+#fs-3:checked ~ .content { font-size: 16px; }
+
+h1 {
+	font-size: 20px;
+}
+
+.content {
+	/* コンテンツの中身の定義 */
+	-webkit-flow-into: myContent;
+	flow-into: myContent;
+}
+.block-item {
+	/* 表示用の要素の定義 */
+	-webkit-flow-from: myContent;
+	flow-from: myContent;
+	/* はみ出た場合の設定 */
+	-webkit-region-fragment: auto; /* break or auto */
+	region-fragment: auto; /* break or auto */
+}
+
+.block {
+	width: 500px;
+}
+.block-item {
+	float: left;
+	width: 230px;
+	height: 300px;
+	padding: 10px;
+}
+

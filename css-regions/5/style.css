@@ -1,0 +1,64 @@
+@charset "UTF-8";
+/* fontsize changer */
+[name="fs"] {
+	display: none;
+}
+label {
+	display: inline-block;
+	border: 1px solid #ccc;
+	padding: 5px;
+	margin-bottom: 10px;
+}
+[name="fs"]:checked + label {
+	background: #ccc;
+	color: #fff;
+}
+#fs-1:checked ~ .content { font-size: 12px; }
+#fs-2:checked ~ .content { font-size: 14px; }
+#fs-3:checked ~ .content { font-size: 17px; }
+
+p {
+	padding: 0 10px 10px;
+}
+
+[id*="layout"] {
+	width: 300px;
+	height: 100px;
+	padding: 5px;
+	margin-bottom: 10px;
+}
+#layout1 {
+	border:2px solid tomato;
+}
+#layout2 {
+	border:2px solid olive;
+}
+#layout3 {
+	border:2px solid chocolate;
+}
+
+@-webkit-region #layout1 {
+	p{
+		color: tomato;
+	}
+}
+@-webkit-region #layout2 {
+	p{
+		color: olive;
+	}
+}
+@-webkit-region #layout3 {
+	p{
+		color: #fff;
+		background-color: chocolate;
+	}
+}
+
+[id*="layout"] {
+	-webkit-flow-from: article;
+	flow-from: article;
+}
+.article {
+	-webkit-flow-into: article;
+	flow-into: article;
+}
