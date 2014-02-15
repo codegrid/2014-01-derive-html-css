@@ -1,0 +1,42 @@
+@charset "UTF-8";
+/* fontsize changer */
+[name="fs"] {
+	display: none;
+}
+label {
+	display: inline-block;
+	border: 1px solid #ccc;
+	padding: 5px;
+	margin-bottom: 10px;
+}
+[name="fs"]:checked + label {
+	background: #ccc;
+	color: #fff;
+}
+#fs-1:checked ~ .content { font-size: 12px; }
+#fs-2:checked ~ .content { font-size: 14px; }
+#fs-3:checked ~ .content { font-size: 17px; }
+
+.article {
+	word-break: break-all;
+}
+
+.shape1, .shape2 {
+	width: 200px;
+	height: 100px;
+	-webkit-shape-margin: 8px;
+}
+
+.shape1 {
+	float: left;
+	-webkit-shape-outside: polygon(0 0, 100% 100%, 0 100%);
+	margin: 0 8px 8px 0;
+	border:1px solid tomato;
+}
+.shape2 {
+	float: right;
+	-webkit-shape-outside: polygon(100% 0, 100% 100%, 0 100%);
+	-webkit-shape-margin: 8px;
+	margin: 0 0 8px 8px;
+	border:1px solid chocolate;
+}

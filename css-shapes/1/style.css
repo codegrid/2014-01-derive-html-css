@@ -1,0 +1,53 @@
+@charset "UTF-8";
+/* fontsize changer */
+[name="fs"] {
+	display: none;
+}
+label {
+	display: inline-block;
+	border: 1px solid #ccc;
+	padding: 5px;
+	margin-bottom: 10px;
+}
+[name="fs"]:checked + label {
+	background: #ccc;
+	color: #fff;
+}
+#fs-1:checked ~ .content { font-size: 12px; }
+#fs-2:checked ~ .content { font-size: 14px; }
+#fs-3:checked ~ .content { font-size: 17px; }
+
+.article {
+	word-break: break-all;
+}
+
+.shape1 {
+	float: left;
+	width: 100px;
+	height: 100px;
+	-webkit-shape-outside: circle(50px, 50px, 50px);
+	-webkit-shape-margin: 8px;
+	border-radius: 50%;
+	background: tomato;
+	margin: 0 8px 8px 0;
+}
+.shape2 {
+	float: right;
+	width: 100px;
+	height: 100px;
+	-webkit-shape-outside: rectangle(0, 0, 100px, 100px);
+	-webkit-shape-margin: 8px;
+	background: chocolate;
+	margin: 0 0px 8px 8px;
+}
+.shape3 {
+	float: left;
+	width: 100px;
+	height: 100px;
+	-webkit-shape-outside: rectangle(0, 0, 100px, 100px, 40px, 40px);
+	-webkit-shape-margin: 8px;
+	background: orange;
+	border-radius: 40px;
+	margin: 0 8px 8px 0;
+}
+

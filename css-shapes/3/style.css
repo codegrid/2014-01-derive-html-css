@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+body {
+	margin:0;
+	padding:0;
+}
+
+h1 {
+	margin: 0 0 0;
+}
+h2 {
+	margin: 0 0 10px;
+}
+
+/* fontsize changer */
+[name="fs"] {
+	display: none;
+}
+label {
+	display: inline-block;
+	border: 1px solid #ccc;
+	padding: 5px;
+	margin-bottom: 10px;
+}
+[name="fs"]:checked + label {
+	background: #ccc;
+	color: #fff;
+}
+#fs-1:checked ~ .content { font-size: 12px; }
+#fs-2:checked ~ .content { font-size: 14px; }
+#fs-3:checked ~ .content { font-size: 17px; }
+
+/* 見た目の設定 */
+.stage {
+	width: 400px;
+	font-family: sans-serif;
+	word-break: break-all;
+	line-height: 1.5;
+	color: #111;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+.shape {
+	width: 352px;
+	height: 306px;
+	margin: 0 auto;
+	margin-bottom: 10px;
+	/* 
+	シェイプの定義
+	*/
+	-webkit-shape-outside: polygon(
+		175px 304px,
+		198.333px 280px,
+		238.667px 246.333px,
+		291.647px 212.322px,
+		314.333px 191.333px,
+		341.333px 163px,
+		350px 119px,
+		344px 76.333px,
+		335.333px 59.667px,
+		304.667px 16.333px,
+		260px 0px,
+		211.333px 12.333px,
+		175px 56.333px,
+		138.667px 12.333px,
+		90px 0px,
+		45.333px 16.333px,
+		14.667px 59.667px,
+		6px 76.333px,
+		0px 119px,
+		8.667px 163px,
+		35.667px 191.333px,
+		58.353px 212.322px,
+		111.333px 246.333px,
+		151.667px 280px
+	);
+}
+.texts {
+	word-break: break-all;
+}
+.left {
+	float: left;
+	width: 48%;
+	height: 200px;
+	margin-right: 2%;
+}
+.right {
+	overflow: hidden;
+}
+
+/* 領域の設定 */
+.texts {
+	-webkit-flow-into: region1;
+	-ms-flow-into: region1;
+	flow-into: region1;
+}
+
+.shape,
+.left,
+.right {
+	-webkit-flow-from: region1;
+	-ms-flow-from: region1;
+	flow-from: region1;
+}
+
+@-webkit-region .shape {
+	.texts {
+		color: tomato;
+	}
+}
