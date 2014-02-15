@@ -34,3 +34,11 @@
 - `3` region-fragmentとoverflowの組み合わせ
 - `4` CSS RegionsとCSS3 Media Queriesの組み合わせ
 - `5` @regionsルールの利用
+
+### css-shapes
+
+- `0` shape-outsideとshape-insideの違い
+- `1` shape-outsideプロパティの利用
+- `2` 複雑な図形の作成
+- `3` CSS RegionsとShapesを利用したレイアウト
+
